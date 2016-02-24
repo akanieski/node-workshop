@@ -11,6 +11,9 @@
     * package.json
     * __{Break for lunch}__
     * Async programming and callbacks
+        * Problems with nested callbacks
+        * Using control flow libraries like async
+        * Using ES6 Generators   
 * Express
     * Minimalism
     * Routing
