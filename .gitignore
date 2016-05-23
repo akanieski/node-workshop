@@ -1,3 +1,4 @@
 **/*/node_modules
 **/*/.vscode
 **/*/.tmp
+azure-ad-app/koa-sample/config.js

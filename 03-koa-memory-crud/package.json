@@ -1,10 +1,11 @@
 {
-  "name": "02-koa",
+  "name": "03-koa-mongo-crud",
   "version": "1.0.0",
   "description": "",
-  "main": "basic.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node basic.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",

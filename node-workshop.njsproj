@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <SchemaVersion>2.0</SchemaVersion>
+        <ProjectGuid>{845fcd70-8865-461b-8848-daa03381d5c7}</ProjectGuid>
+        <ProjectHome />
+        <ProjectView>ShowAllFiles</ProjectView>
+        <StartupFile />
+        <WorkingDirectory>.</WorkingDirectory>
+        <OutputPath>.</OutputPath>
+        <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+        <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+        <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+    <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+    <ItemGroup>
+        <Content Include="agenda.md" />
+        <Content Include="01-basic\package.json" />
+        <Compile Include="01-basic\async-sample.js" />
+        <Compile Include="01-basic\run-async.js" />
+        <Content Include="02-express\package.json" />
+        <Compile Include="02-express\basic.js" />
+        <Compile Include="02-express\clustered.js" />
+        <Content Include="02-koa\package.json" />
+        <Compile Include="02-koa\basic.js" />
+        <Compile Include="02-koa\clustered.js" />
+        <Content Include="03-koa-memory-crud\index.html" />
+        <Content Include="03-koa-memory-crud\package.json" />
+        <Compile Include="03-koa-memory-crud\server.js" />
+        <Content Include="03-koa-mongo-crud\index.html" />
+        <Content Include="03-koa-mongo-crud\package.json" />
+        <Compile Include="03-koa-mongo-crud\config.js" />
+        <Compile Include="03-koa-mongo-crud\passport.js" />
+        <Compile Include="03-koa-mongo-crud\server.js" />
+        <Content Include="03-mssql-crud\package.json" />
+        <Compile Include="03-mssql-crud\server.js" />
+        <Content Include="azure-ad-app\index.html" />
+        <Content Include="koa-skeleton\package.json" />
+        <Compile Include="koa-skeleton\index.js" />
+        <Content Include="SailsTestApp\package.json" />
+        <Content Include="SailsTestApp\README.md" />
+        <Compile Include="SailsTestApp\app.js" />
+        <Compile Include="SailsTestApp\Gruntfile.js" />
+        <Content Include="01-basic\01-basic\package.json" />
+        <Content Include="01-basic\01-basic\README.md" />
+        <Compile Include="01-basic\01-basic\app.js" />
+        <Compile Include="03-koa-memory-crud\api\system.js" />
+        <Compile Include="03-koa-memory-crud\middleware\logger.js" />
+        <Compile Include="03-koa-memory-crud\models\employees.js" />
+        <Compile Include="03-koa-memory-crud\api\employees\create.js" />
+        <Compile Include="03-koa-memory-crud\api\employees\detail.js" />
+        <Compile Include="03-koa-memory-crud\api\employees\list.js" />
+        <Compile Include="03-koa-memory-crud\api\employees\update.js" />
+        <Compile Include="03-koa-mongo-crud\api\system.js" />
+        <Compile Include="03-koa-mongo-crud\middleware\logger.js" />
+        <Compile Include="03-koa-mongo-crud\models\employee.js" />
+        <Compile Include="03-koa-mongo-crud\api\employees\create.js" />
+        <Compile Include="03-koa-mongo-crud\api\employees\detail.js" />
+        <Compile Include="03-koa-mongo-crud\api\employees\list.js" />
+        <Compile Include="03-koa-mongo-crud\api\employees\update.js" />
+        <Compile Include="03-mssql-crud\config\db.js" />
+        <Compile Include="03-mssql-crud\config\router.js" />
+        <Compile Include="03-mssql-crud\app\controllers\person.js" />
+        <Compile Include="azure-ad-app\koa-sample\config.js" />
+        <Compile Include="azure-ad-app\koa-sample\passport.js" />
+        <Compile Include="azure-ad-app\koa-sample\server.js" />
+        <Compile Include="koa-skeleton\config\settings.js" />
+        <Compile Include="koa-skeleton\src\routes.js" />
+        <Compile Include="koa-skeleton\src\webapp.js" />
+        <Compile Include="koa-skeleton\src\middleware\apiVersion.js" />
+        <Compile Include="koa-skeleton\src\middleware\index.js" />
+        <Compile Include="koa-skeleton\src\middleware\requestLogger.js" />
+        <Compile Include="koa-skeleton\src\controllers\api\system.js" />
+        <Content Include="SailsTestApp\assets\robots.txt" />
+        <Content Include="SailsTestApp\assets\favicon.ico" />
+        <Compile Include="SailsTestApp\config\blueprints.js" />
+        <Compile Include="SailsTestApp\config\bootstrap.js" />
+        <Compile Include="SailsTestApp\config\connections.js" />
+        <Compile Include="SailsTestApp\config\cors.js" />
+        <Compile Include="SailsTestApp\config\csrf.js" />
+        <Compile Include="SailsTestApp\config\globals.js" />
+        <Compile Include="SailsTestApp\config\http.js" />
+        <Compile Include="SailsTestApp\config\i18n.js" />
+        <Compile Include="SailsTestApp\config\log.js" />
+        <Compile Include="SailsTestApp\config\models.js" />
+        <Compile Include="SailsTestApp\config\policies.js" />
+        <Compile Include="SailsTestApp\config\routes.js" />
+        <Compile Include="SailsTestApp\config\session.js" />
+        <Compile Include="SailsTestApp\config\sockets.js" />
+        <Compile Include="SailsTestApp\config\views.js" />
+        <Content Include="SailsTestApp\tasks\README.md" />
+        <Compile Include="SailsTestApp\tasks\pipeline.js" />
+        <Content Include="SailsTestApp\views\403.ejs" />
+        <Content Include="SailsTestApp\views\404.ejs" />
+        <Content Include="SailsTestApp\views\500.ejs" />
+        <Content Include="SailsTestApp\views\homepage.ejs" />
+        <Content Include="SailsTestApp\views\layout.ejs" />
+        <Compile Include="SailsTestApp\api\controllers\PersonController.js" />
+        <Compile Include="SailsTestApp\api\models\Person.js" />
+        <Compile Include="SailsTestApp\api\policies\sessionAuth.js" />
+        <Compile Include="SailsTestApp\api\responses\badRequest.js" />
+        <Compile Include="SailsTestApp\api\responses\forbidden.js" />
+        <Compile Include="SailsTestApp\api\responses\notFound.js" />
+        <Compile Include="SailsTestApp\api\responses\ok.js" />
+        <Compile Include="SailsTestApp\api\responses\serverError.js" />
+        <Compile Include="SailsTestApp\assets\js\dependencies\sails.io.js" />
+        <Compile Include="SailsTestApp\config\env\development.js" />
+        <Compile Include="SailsTestApp\config\env\production.js" />
+        <Content Include="SailsTestApp\config\locales\de.json" />
+        <Content Include="SailsTestApp\config\locales\en.json" />
+        <Content Include="SailsTestApp\config\locales\es.json" />
+        <Content Include="SailsTestApp\config\locales\fr.json" />
+        <Content Include="SailsTestApp\config\locales\_README.md" />
+        <Compile Include="SailsTestApp\tasks\config\clean.js" />
+        <Compile Include="SailsTestApp\tasks\config\coffee.js" />
+        <Compile Include="SailsTestApp\tasks\config\concat.js" />
+        <Compile Include="SailsTestApp\tasks\config\copy.js" />
+        <Compile Include="SailsTestApp\tasks\config\cssmin.js" />
+        <Compile Include="SailsTestApp\tasks\config\jst.js" />
+        <Compile Include="SailsTestApp\tasks\config\less.js" />
+        <Compile Include="SailsTestApp\tasks\config\sails-linker.js" />
+        <Compile Include="SailsTestApp\tasks\config\sync.js" />
+        <Compile Include="SailsTestApp\tasks\config\uglify.js" />
+        <Compile Include="SailsTestApp\tasks\config\watch.js" />
+        <Compile Include="SailsTestApp\tasks\register\build.js" />
+        <Compile Include="SailsTestApp\tasks\register\buildProd.js" />
+        <Compile Include="SailsTestApp\tasks\register\compileAssets.js" />
+        <Compile Include="SailsTestApp\tasks\register\default.js" />
+        <Compile Include="SailsTestApp\tasks\register\linkAssets.js" />
+        <Compile Include="SailsTestApp\tasks\register\linkAssetsBuild.js" />
+        <Compile Include="SailsTestApp\tasks\register\linkAssetsBuildProd.js" />
+        <Compile Include="SailsTestApp\tasks\register\prod.js" />
+        <Compile Include="SailsTestApp\tasks\register\syncAssets.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Folder Include="01-basic" />
+        <Folder Include="01-basic\01-basic" />
+        <Folder Include="01-basic\01-basic\obj" />
+        <Folder Include="01-basic\01-basic\obj\Debug" />
+        <Folder Include="02-express" />
+        <Folder Include="02-koa" />
+        <Folder Include="03-koa-memory-crud" />
+        <Folder Include="03-koa-memory-crud\api" />
+        <Folder Include="03-koa-memory-crud\api\employees" />
+        <Folder Include="03-koa-memory-crud\middleware" />
+        <Folder Include="03-koa-memory-crud\models" />
+        <Folder Include="03-koa-mongo-crud" />
+        <Folder Include="03-koa-mongo-crud\api" />
+        <Folder Include="03-koa-mongo-crud\api\employees" />
+        <Folder Include="03-koa-mongo-crud\middleware" />
+        <Folder Include="03-koa-mongo-crud\models" />
+        <Folder Include="03-mssql-crud" />
+        <Folder Include="03-mssql-crud\app" />
+        <Folder Include="03-mssql-crud\app\controllers" />
+        <Folder Include="03-mssql-crud\config" />
+        <Folder Include="azure-ad-app" />
+        <Folder Include="azure-ad-app\koa-sample" />
+        <Folder Include="koa-skeleton" />
+        <Folder Include="koa-skeleton\config" />
+        <Folder Include="koa-skeleton\src" />
+        <Folder Include="koa-skeleton\src\controllers" />
+        <Folder Include="koa-skeleton\src\controllers\api" />
+        <Folder Include="koa-skeleton\src\middleware" />
+        <Folder Include="koa-skeleton\src\models" />
+        <Folder Include="koa-skeleton\src\responses" />
+        <Folder Include="koa-skeleton\src\services" />
+        <Folder Include="SailsTestApp" />
+        <Folder Include="SailsTestApp\api" />
+        <Folder Include="SailsTestApp\api\controllers" />
+        <Folder Include="SailsTestApp\api\models" />
+        <Folder Include="SailsTestApp\api\policies" />
+        <Folder Include="SailsTestApp\api\responses" />
+        <Folder Include="SailsTestApp\api\services" />
+        <Folder Include="SailsTestApp\assets" />
+        <Folder Include="SailsTestApp\assets\images" />
+        <Folder Include="SailsTestApp\assets\js" />
+        <Folder Include="SailsTestApp\assets\js\dependencies" />
+        <Folder Include="SailsTestApp\assets\styles" />
+        <Folder Include="SailsTestApp\assets\templates" />
+        <Folder Include="SailsTestApp\config" />
+        <Folder Include="SailsTestApp\config\env" />
+        <Folder Include="SailsTestApp\config\locales" />
+        <Folder Include="SailsTestApp\tasks" />
+        <Folder Include="SailsTestApp\tasks\config" />
+        <Folder Include="SailsTestApp\tasks\register" />
+        <Folder Include="SailsTestApp\views" />
+    </ItemGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+    <!--Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them.-->
+    <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
+    <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+    <ProjectExtensions>
+        <VisualStudio>
+          <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+            <WebProjectProperties>
+              <UseIIS>False</UseIIS>
+              <AutoAssignPort>True</AutoAssignPort>
+              <DevelopmentServerPort>0</DevelopmentServerPort>
+              <DevelopmentServerVPath>/</DevelopmentServerVPath>
+              <IISUrl>http://localhost:48022/</IISUrl>
+              <NTLMAuthentication>False</NTLMAuthentication>
+              <UseCustomServer>True</UseCustomServer>
+              <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+              <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+            </WebProjectProperties>
+          </FlavorProperties>
+          <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+            <WebProjectProperties>
+              <StartPageUrl>
+              </StartPageUrl>
+              <StartAction>CurrentPage</StartAction>
+              <AspNetDebugging>True</AspNetDebugging>
+              <SilverlightDebugging>False</SilverlightDebugging>
+              <NativeDebugging>False</NativeDebugging>
+              <SQLDebugging>False</SQLDebugging>
+              <ExternalProgram>
+              </ExternalProgram>
+              <StartExternalURL>
+              </StartExternalURL>
+              <StartCmdLineArguments>
+              </StartCmdLineArguments>
+              <StartWorkingDirectory>
+              </StartWorkingDirectory>
+              <EnableENC>False</EnableENC>
+              <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+            </WebProjectProperties>
+          </FlavorProperties>
+        </VisualStudio>
+    </ProjectExtensions>
+</Project>

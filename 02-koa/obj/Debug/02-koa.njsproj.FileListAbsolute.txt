@@ -1,0 +1,2 @@
+C:\code\node-workshop\02-koa\obj\Debug\02-koa.njsprojResolveAssemblyReference.cache
+C:\code\node-workshop\02-koa\bin\Microsoft.NodejsTools.WebRole.dll

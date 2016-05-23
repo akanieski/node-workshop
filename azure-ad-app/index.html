@@ -1,0 +1,90 @@
+<html ng-app="azure-ad-app">
+    <head>
+        <base href="/">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-route.min.js"></script>
+        <script src="https://secure.aadcdn.microsoftonline-p.com/lib/1.0.9/js/adal.min.js"></script>
+        <script src="https://secure.aadcdn.microsoftonline-p.com/lib/1.0.9/js/adal-angular.min.js"></script>
+        <script>
+            (function(){
+                var app = angular.module('azure-ad-app', ['ngRoute', 'AdalAngular']);
+                
+                // using '!' as the hashPrefix but can be a character of your choosing
+                app.config(['$locationProvider', function($locationProvider) {
+                    $locationProvider.html5Mode(true).hashPrefix('!');
+                }]);
+                
+                app.config(['$routeProvider', '$httpProvider', 'adalAuthenticationServiceProvider', function ($routeProvider, $httpProvider, adalProvider) {
+
+                    adalProvider.init(
+                        {
+                            instance: 'https://login.microsoftonline.com/', 
+                            tenant: 'uucorp.onmicrosoft.com',
+                            clientId: '92662b49-cc89-44b5-bf9c-d69924fa0d8b',
+                            extraQueryParameter: 'nux=1',
+                            //cacheLocation: 'localStorage', // enable this for IE, as sessionStorage does not work for localhost.
+                        },
+                        $httpProvider
+                        );
+                
+                }]);
+                
+                app.controller('HomeCtrl', ['$scope', '$location', 'adalAuthenticationService', function ($scope, $location, adalAuthenticationService) {
+                    // this is referencing adal module to do login
+
+                    //userInfo is defined at the $rootscope with adalAngular module
+                    $scope.testMessage = "";
+                    $scope.init = function () {
+                        $scope.testMessage = "";
+                    };
+
+                    $scope.logout = function () {
+                        adalAuthenticationService.logOut();
+                    };
+
+                    $scope.login = function () {
+                        adalAuthenticationService.login();
+                    };
+
+                    // optional
+                    $scope.$on("adal:loginSuccess", function () {
+                        $scope.testMessage = "loginSuccess";
+                    });
+
+                    // optional
+                    $scope.$on("adal:loginFailure", function () {
+                        $scope.testMessage = "loginFailure";
+                        $location.path("/login");
+                    });
+
+                    // optional
+                    $scope.$on("adal:notAuthorized", function (event, rejection, forResource) {
+                        $scope.testMessage = "It is not Authorized for resource:" + forResource;
+                    });
+
+                }]);
+
+                
+                
+            })();
+        </script>
+    </head>
+    
+    <body ng-controller="HomeCtrl">
+        <div data-ng-model="userInfo">
+            <span data-ng-hide="!userInfo.isAuthenticated">Welcome {{userInfo.userName}} </span>
+            <button data-ng-hide="!userInfo.isAuthenticated" data-ng-click="logout()">Logout</button>
+            <button data-ng-hide="userInfo.isAuthenticated" data-ng-click="login()">Login</button>
+
+            <div>
+                {{userInfo.loginError}}
+                <pre>
+                {{userInfo | json}}
+                </pre>
+            </div>
+            <div>
+                {{testMessage}}
+            </div>
+        </div>
+    </body>
+</html>
