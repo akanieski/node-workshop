@@ -1,9 +1,9 @@
 'use strict'
 const Mongorito = require('mongorito')
 
-module.exports = class Employee extends Mongorito.Model {
+module.exports = class Department extends Mongorito.Model {
     get collection() { 
-        return 'employees';
+        return 'departments';
     }
     
     static getConnectionUrl() {

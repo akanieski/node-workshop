@@ -4,7 +4,7 @@ const Employee = require('../../models/employee')
 
 module.exports = function*(next){
     try {
-        Mongorito.connect(process.env.MONGO_DB)
+        Mongorito.connect(Employee.getConnectionUrl())
         
         let emp = new Employee(this.request.body)
         

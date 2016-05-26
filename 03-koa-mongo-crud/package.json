@@ -4,7 +4,9 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "seed": "\\mongo\\mongo %MONGO_HOST%:%MONGO_PORT%/%MONGO_DB% ./tasks/seedData.mongo.js",
+    "drop": "\\mongo\\mongo %MONGO_HOST%:%MONGO_PORT%/%MONGO_DB% ./tasks/dropData.mongo.js",
+    "test": "npm run drop && npm run seed && mocha tests",
     "start": "node server.js"
   },
   "author": "",
@@ -14,5 +16,8 @@
     "koa-bodyparser": "^2.0.1",
     "koa-router": "^5.4.0",
     "mongorito": "^2.0.0"
+  },
+  "devDependencies": {
+    "request": "^2.72.0"
   }
 }

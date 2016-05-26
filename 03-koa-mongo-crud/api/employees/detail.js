@@ -1,16 +1,23 @@
 'use strict'
 const Mongorito = require('mongorito');
 const Employee = require('../../models/employee')
+const Department = require('../../models/department')
 
 module.exports = function*(next){
     try {
-        Mongorito.connect(process.env.MONGO_DB)
+        Mongorito.connect(Employee.getConnectionUrl())
         
-        let result = yield Employee.findById(this.params.id)
+        let result = yield Employee
+            .findOne({employeeId: this.params.id})
         
-        this.body = {
-            data: result.toJSON(), 
-            success: true
+        if (!result) {
+            this.body = {data: null, success: false}
+            this.response.status = 404
+        } else {
+            this.body = {
+                data: result.toJSON(), 
+                success: true
+            }
         }
         
         yield next
